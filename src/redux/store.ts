@@ -1,7 +1,8 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { predictionReducer } from "./features/predictionSlice/predictionSlice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: { prediction: predictionReducer },
 });
 
 export type AppDispatch = typeof store.dispatch;
