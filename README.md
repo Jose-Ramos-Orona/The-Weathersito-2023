@@ -10,7 +10,7 @@ I'm use the "Weatherapi" ⚡
 - The weather from Weatherapi :
 
   - Name of the city
-  - ID
+  - Time
   - Cº
   - Description
   - Image URL
