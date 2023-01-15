@@ -1,6 +1,7 @@
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { store } from "../redux/store";
+import GlobalStyles from "../style/GlobalStyles";
 
 interface ProviderWrapperProps {
   children: JSX.Element | JSX.Element[];
@@ -9,7 +10,11 @@ interface ProviderWrapperProps {
 const providerWrapper = ({ children }: ProviderWrapperProps) => {
   return (
     <BrowserRouter>
-      <Provider store={store}>{children}</Provider>;
+      <Provider store={store}>
+        <GlobalStyles />
+        {children}
+      </Provider>
+      ;
     </BrowserRouter>
   );
 };
