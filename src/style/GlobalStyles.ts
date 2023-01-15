@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: permanent-marker, sans-serif;
+  font-family: permanent marker, sans-serif;
 }
 
 button,
