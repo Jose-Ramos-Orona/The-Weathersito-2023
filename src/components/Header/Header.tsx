@@ -11,6 +11,7 @@ const Header = (): JSX.Element => {
         src="../../sun.png"
         alt="A sun"
       />
+      <p>!</p>
     </HeaderStyled>
   );
 };

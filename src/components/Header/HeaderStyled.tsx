@@ -7,13 +7,15 @@ const HeaderStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
   .main-title {
     color: black;
     font-size: 2rem;
   }
+
   .image-title {
     margin-left: 3px;
-    margin-top: 5px;
+    margin-top: 7px;
   }
 `;
 export default HeaderStyled;
