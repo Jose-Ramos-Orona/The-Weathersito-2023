@@ -7,9 +7,9 @@ const HeaderStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 2rem;
 
   .main-title {
-    color: black;
     font-size: 2rem;
   }
 
