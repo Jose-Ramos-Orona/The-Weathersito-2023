@@ -13,6 +13,7 @@ html {
 
 body {
   font-family: permanent marker, sans-serif;
+  color: #212121;
   background-color: papayawhip;
 }
 
