@@ -1,6 +1,4 @@
-import mockPrediction from "../../mocks/mockPrediction";
 import Header from "../Header/Header";
-import WeatherCard from "../WeatherCard/WeatherCard";
 import AppStyled from "./AppStyled";
 
 const App = () => {
@@ -29,7 +27,6 @@ const App = () => {
           ></path>
         </svg>
         <Header />
-        <WeatherCard weather={mockPrediction} />
       </div>
     </AppStyled>
   );
