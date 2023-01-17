@@ -18,7 +18,7 @@ const WeatherCard = (weather: WeatherProps): JSX.Element => {
   return (
     <WeatherCardStyled className="weather-container">
       <div className="weather-container__temperature">
-        <h2>{temp_c}º</h2>
+        <h2>{temp_c}ºC</h2>
       </div>
       <div className="weather-container__current">
         <h2>{name}</h2>
