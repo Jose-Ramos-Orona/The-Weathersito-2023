@@ -14,7 +14,6 @@ const providerWrapper = ({ children }: ProviderWrapperProps) => {
         <GlobalStyles />
         {children}
       </Provider>
-      ;
     </BrowserRouter>
   );
 };

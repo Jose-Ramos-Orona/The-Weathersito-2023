@@ -1,4 +1,5 @@
 import Header from "../Header/Header";
+import SearchBar from "../SearchBar/SearchBar";
 import AppStyled from "./AppStyled";
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
           ></path>
         </svg>
         <Header />
+        <SearchBar />
       </div>
     </AppStyled>
   );
