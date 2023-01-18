@@ -1,6 +1,8 @@
+import { Route, Routes } from "react-router-dom";
 import Header from "../Header/Header";
 import SearchBar from "../SearchBar/SearchBar";
 import AppStyled from "./AppStyled";
+import WeatherPage from "../../pages/WeatherPage/WeatherPage";
 
 const App = () => {
   return (
@@ -29,6 +31,9 @@ const App = () => {
         </svg>
         <Header />
         <SearchBar />
+        <Routes>
+          <Route path="/weather/:city" element={<WeatherPage />} />
+        </Routes>
       </div>
     </AppStyled>
   );
