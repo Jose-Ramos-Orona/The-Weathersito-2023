@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { PredictionStructure } from "./types";
 
 export interface PredictionState {
-  prediction: PredictionStructure;
+  prediction?: PredictionStructure;
 }
 
 export const initialPredictionState: PredictionState = {
