@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const WeatherCardStyled = styled.div`
-  width: 190px;
+  width: 250px;
   height: 300px;
-  margin-top: 100px;
+  margin-top: 60px;
   background: #f5f5f5;
   overflow: visible;
   box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.1);
