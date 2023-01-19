@@ -10,6 +10,7 @@ const SearchBarStyled = styled.div`
   }
 
   .search__bar {
+    text-align: center;
     height: 40px;
     padding: 5px;
     border: 1px solid #212121;
