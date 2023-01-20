@@ -9,7 +9,7 @@ export interface LocationStructure {
 }
 
 export interface CurrentStructure {
-  temp_c: number;
+  temp_c: number | string;
   condition: ConditionStructure;
 }
 
