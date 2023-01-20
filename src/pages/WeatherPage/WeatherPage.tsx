@@ -10,9 +10,9 @@ const WeatherPage = (): JSX.Element => {
 
   useEffect(() => {
     loadCityWeather(city!);
-  }, [city, loadCityWeather]);
+  }, [loadCityWeather, city]);
 
-  const prediction = useAppSelector(({ prediction }) => prediction.prediction);
+  const prediction = useAppSelector(({ prediction }) => prediction.prediction!);
 
   return <WeatherCard weather={prediction!} />;
 };

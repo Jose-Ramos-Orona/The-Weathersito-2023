@@ -2,7 +2,6 @@ import axios from "axios";
 import { useCallback } from "react";
 import { useNavigate } from "react-router";
 import { getPredictionActionCreator } from "../redux/features/predictionSlice/predictionSlice";
-import { PredictionStructure } from "../redux/features/predictionSlice/types";
 import { useAppDispatch } from "../redux/hooks";
 
 const useWeather = () => {
@@ -16,7 +15,7 @@ const useWeather = () => {
       try {
         const response = await axios.get(`${apiUrl}key=${userKey}&q=${city}`);
 
-        const prediction = (await response.data) as PredictionStructure;
+        const prediction = response.data;
 
         dispatch(getPredictionActionCreator(prediction));
         navigate(`/weather/${prediction.location.name}`);

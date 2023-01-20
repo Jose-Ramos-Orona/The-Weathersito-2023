@@ -1,12 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import initialState from "../../../mocks/initialState";
 import { PredictionStructure } from "./types";
 
 export interface PredictionState {
-  prediction?: PredictionStructure;
+  prediction: PredictionStructure;
 }
 
 export const initialPredictionState: PredictionState = {
-  prediction: {} as PredictionStructure,
+  prediction: initialState,
 };
 
 const predictionSlice = createSlice({

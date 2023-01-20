@@ -5,16 +5,15 @@ interface WeatherProps {
   weather: PredictionStructure;
 }
 
-const WeatherCard = (weather: WeatherProps): JSX.Element => {
+const WeatherCard = ({ weather }: WeatherProps): JSX.Element => {
   const {
-    weather: {
-      current: {
-        temp_c,
-        condition: { icon, text },
-      },
-      location: { localtime, name },
+    current: {
+      temp_c,
+      condition: { icon, text },
     },
+    location: { localtime, name },
   } = weather;
+
   return (
     <WeatherCardStyled className="weather-container">
       <div className="weather-container__temperature">
