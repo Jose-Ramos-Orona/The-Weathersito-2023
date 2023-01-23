@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import SearchBar from "../SearchBar/SearchBar";
 import AppStyled from "./AppStyled";
 import WeatherPage from "../../pages/WeatherPage/WeatherPage";
+import HomePage from "../../pages/HomePage/HomePage";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         <Header />
         <SearchBar />
         <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route path="/weather/:city" element={<WeatherPage />} />
         </Routes>
       </div>
