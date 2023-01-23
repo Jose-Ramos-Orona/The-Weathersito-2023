@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const HeaderStyled = styled.div`
   width: 100%;
-  padding: 0.625rem 1.875rem;
+  padding: 0.625rem 1.5rem;
   background: papayawhip;
   display: flex;
   align-items: center;
