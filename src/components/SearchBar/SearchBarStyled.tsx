@@ -5,17 +5,19 @@ const SearchBarStyled = styled.div`
 
   .search {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
   }
 
   .search__bar {
     font-size: 16px;
     text-align: center;
-    height: 40px;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #212121;
-    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .search__button {
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
   }
 `;
 export default SearchBarStyled;

@@ -8,7 +8,7 @@ const AppStyled = styled.div`
     justify-content: center;
     width: 100%;
     overflow: hidden;
-    line-height: 0;
+    padding: 0 15px;
   }
 
   .container svg {

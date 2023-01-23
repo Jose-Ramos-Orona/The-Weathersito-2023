@@ -1,15 +1,20 @@
 import styled from "styled-components";
 
-const WeatherCardStyled = styled.div`
-  width: 250px;
-  height: 300px;
-  margin-top: 60px;
+const WeatherCardStyled = styled.article`
+  width: 310px;
+  height: 400px;
+  margin-top: 65px;
+  margin-bottom: 50px;
   background: #f5f5f5;
   overflow: visible;
   box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .weather-container__city {
+    text-align: center;
+  }
 
   .weather-container__current {
     display: flex;
@@ -50,6 +55,10 @@ const WeatherCardStyled = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .weather-container__information {
+    font-size: 20px;
   }
 `;
 
