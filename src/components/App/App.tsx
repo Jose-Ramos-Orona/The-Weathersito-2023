@@ -1,11 +1,14 @@
+import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "../Header/Header";
+import Loader from "../Loader/Loader";
 import SearchBar from "../SearchBar/SearchBar";
 import AppStyled from "./AppStyled";
-import WeatherPage from "../../pages/WeatherPage/WeatherPage";
-import HomePage from "../../pages/HomePage/HomePage";
-import ErrorPage from "../../pages/ErrorPage/ErrorPage";
-import Loader from "../Loader/Loader";
+const WeatherPage = React.lazy(
+  () => import("../../pages/WeatherPage/WeatherPage")
+);
+const HomePage = React.lazy(() => import("../../pages/HomePage/HomePage"));
+const ErrorPage = React.lazy(() => import("../../pages/ErrorPage/ErrorPage"));
 
 const App = () => {
   return (
@@ -34,12 +37,13 @@ const App = () => {
         </svg>
         <Header />
         <SearchBar />
-        <Loader />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/weather/:city" element={<WeatherPage />} />
-          <Route path="/error" element={<ErrorPage />} />
-        </Routes>
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/weather/:city" element={<WeatherPage />} />
+            <Route path="/error" element={<ErrorPage />} />
+          </Routes>
+        </Suspense>
       </div>
     </AppStyled>
   );

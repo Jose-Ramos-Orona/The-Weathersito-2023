@@ -5,7 +5,7 @@ const Loader = (): JSX.Element => {
     <LoaderStyled>
       <div
         className="preloader"
-        aria-label="an image with a sun and a cloud rainin"
+        aria-label="an image with a sun and a cloud raining"
       >
         <svg
           version="1.1"
