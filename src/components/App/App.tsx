@@ -5,6 +5,7 @@ import AppStyled from "./AppStyled";
 import WeatherPage from "../../pages/WeatherPage/WeatherPage";
 import HomePage from "../../pages/HomePage/HomePage";
 import ErrorPage from "../../pages/ErrorPage/ErrorPage";
+import Loader from "../Loader/Loader";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
         </svg>
         <Header />
         <SearchBar />
+        <Loader />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/weather/:city" element={<WeatherPage />} />
