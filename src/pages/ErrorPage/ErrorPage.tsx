@@ -5,7 +5,7 @@ const ErrorPage = (): JSX.Element => {
     <ErrorPageStyled>
       <h2 className="error-message">
         I'm sorry. There seems to be a problem with the information you are
-        asking for. Try again please
+        asking for. Try again please.
       </h2>
     </ErrorPageStyled>
   );

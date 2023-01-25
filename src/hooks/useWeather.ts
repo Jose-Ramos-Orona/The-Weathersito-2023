@@ -19,7 +19,9 @@ const useWeather = () => {
 
         dispatch(getPredictionActionCreator(prediction));
         navigate(`/weather/${prediction.location.name}`);
-      } catch (error: unknown) {}
+      } catch (error: unknown) {
+        navigate("/error");
+      }
     },
     [dispatch, apiUrl, userKey, navigate]
   );
