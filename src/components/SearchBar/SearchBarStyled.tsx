@@ -5,9 +5,16 @@ const SearchBarStyled = styled.div`
 
   .search {
     display: flex;
+    flex-direction: column;
   }
 
-  .search__bar {
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .search-container__bar {
+    height: 49px;
     font-size: 16px;
     text-align: center;
     padding: 10px;
@@ -15,9 +22,13 @@ const SearchBarStyled = styled.div`
     border-radius: 5px 0 0 5px;
   }
 
-  .search__button {
+  .search-container__button {
     padding: 10px;
     border-radius: 0 5px 5px 0;
+  }
+
+  .search__error-message {
+    color: #db2727;
   }
 `;
 export default SearchBarStyled;

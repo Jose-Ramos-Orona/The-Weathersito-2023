@@ -1,13 +1,22 @@
-import { useState, FormEvent } from "react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import useWeather from "../../hooks/useWeather";
 import Button from "../Button/Button";
-import SearchBarStyled from "./SearchBarStyled";
+import SearchBarStyled from "../SearchBar/SearchBarStyled";
+
+interface IFormInput {
+  city: String;
+}
 
 const SearchBar = (): JSX.Element => {
   const { loadCityWeather } = useWeather();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IFormInput>();
   const [cityName, setCityName] = useState("");
-  const citySubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const citySubmit = () => {
     loadCityWeather(cityName);
   };
 
@@ -16,25 +25,28 @@ const SearchBar = (): JSX.Element => {
       <form
         data-testid="form"
         className="search"
-        onSubmit={(event) => {
-          citySubmit(event);
-        }}
+        onSubmit={handleSubmit(citySubmit)}
       >
-        <input
-          type="text"
-          placeholder="Ex: Reus..."
-          className="search__bar"
-          required
-          autoComplete="off"
-          onChange={(event) => {
-            setCityName(event.target.value);
-          }}
-        ></input>
-        <Button
-          text="SEARCH"
-          ariaLabel="Click to search"
-          className="search__button"
-        />
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Ex: Reus..."
+            className="search-container__bar"
+            autoComplete="off"
+            {...register("city", { required: true })}
+            onChange={(event) => {
+              setCityName(event.target.value);
+            }}
+          ></input>
+          <Button
+            text="SEARCH"
+            ariaLabel="Click to search"
+            className="search-container__button"
+          />
+        </div>
+        {errors.city && (
+          <small className="search__error-message">City name is required</small>
+        )}
       </form>
     </SearchBarStyled>
   );
