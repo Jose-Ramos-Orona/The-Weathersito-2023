@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import SearchBarStyled from "../SearchBar/SearchBarStyled";
 
 interface IFormInput {
-  city: String;
+  city: string;
 }
 
 const SearchBar = (): JSX.Element => {
