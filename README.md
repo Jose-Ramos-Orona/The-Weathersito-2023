@@ -1,81 +1,18 @@
 # The Weathersito 🌤
 
 This is a personal project about an app that can be show the current weather of any city.
-I'm use the "Weatherapi" ⚡
+I'm use the Weather-API⚡
 
-# Data layer
+## Built using
 
-## Data
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 
-- The weather from Weatherapi :
+## Testing
 
-  - Name of the city
-  - Time
-  - Cº
-  - Description
-  - Image URL
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+![React Testing Library](https://img.shields.io/badge/react--testing--library-%23E33332.svg?style=for-the-badge&logo=testing-library&logoColor=white)
 
-# Components
-
-## App
-
-### Show data
-
-- Header component
-- When on home page:
-  - A Filter component for search a city weather
-- When on Weather details page:
-  - The Detail component with the specific weather in the searched city
-- When page not found:
-  - An Error404 component
-
-## Header
-
-### Show data
-
-- Title of the page
-
-## Button
-
-### Show data
-
-- Show a Button with the received text inside
-
-### Get Action
-
-- Call the received function
-
-## Detail
-
-### Show data
-
-- Name of the city
-- ID
-- Cº
-- Description
-- Image URL
-
-## Search Bar
-
-### Show data
-
-- A form with one input type text with the label "Search city"
-- A Button component
-
-### Get actions
-
-- When the form is submitted check the input have the correct data
-- When the data is correct show the weathers city
-
-## Error404
-
-### Show data
-
-- A not found image
-- A Not Found text
-
-## Loading
-
-### Show data
-
-- A loading icon
+## [Live Demo](https://the-weathersito.netlify.app/)
